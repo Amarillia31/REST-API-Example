@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.with;
 
 public class Specs {
     public static RequestSpecification request = with()
-            .filter(withCustomTemplates())
+//            .filter(withCustomTemplates())
             .log().all()
             .contentType(ContentType.JSON);
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
