@@ -2,6 +2,7 @@ package com.elena.booking;
 
 import com.elena.lombok.BookingData;
 import com.elena.lombok.LombokBooking;
+import io.qameta.allure.AllureId;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;
 
@@ -18,6 +19,7 @@ public class RestApiTests extends BaseTestAPI {
             firstname = "Jim", lastname = "Brown", additionalneeds = "Breakfast", checkin = "2022-01-01", checkout = "2022-01-15";
 
     @Test
+    @AllureId("11288")
     @Description("Login is accepted,status code 200 is sent ")
     void authTest() {
         String token = given()
@@ -34,6 +36,7 @@ public class RestApiTests extends BaseTestAPI {
     }
 
     @Test
+    @AllureId("11286")
     @Description("Check it is possible to add booking")
     void addBookingTest() {
         LombokBooking data = given()
@@ -56,6 +59,7 @@ public class RestApiTests extends BaseTestAPI {
     }
 
     @Test
+    @AllureId("11287")
     @Description("Update Booking")
     void updatedNonExistentBooking() {
         Auth ids = new Auth();
@@ -70,6 +74,7 @@ public class RestApiTests extends BaseTestAPI {
     }
 
     @Test
+    @AllureId("11285")
     @Description("Update Booking")
     void updatedBooking() {
         Auth ids = new Auth();
@@ -93,6 +98,7 @@ public class RestApiTests extends BaseTestAPI {
     }
 
     @Test
+    @AllureId("11284")
     @Description("It is possible to Delete Booking")
     void deleteBooking() {
         Auth ids = new Auth();
