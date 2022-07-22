@@ -13,6 +13,7 @@ public class Specs {
             .filter(withCustomTemplates())
             .log().all()
             .contentType(ContentType.JSON);
+
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .build();
@@ -21,12 +22,6 @@ public class Specs {
             .expectStatusCode(201)
             .build();
 
-    public static ResponseSpecification response204 = new ResponseSpecBuilder()
-            .expectStatusCode(204)
-            .build();
-    public static ResponseSpecification response400 = new ResponseSpecBuilder()
-            .expectStatusCode(400)
-            .build();
     public static ResponseSpecification response405 = new ResponseSpecBuilder()
             .expectStatusCode(405)
             .build();

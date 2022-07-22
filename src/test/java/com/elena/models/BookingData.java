@@ -1,4 +1,5 @@
-package com.elena.lombok;
+package com.elena.models;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
