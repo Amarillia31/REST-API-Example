@@ -77,7 +77,7 @@ public class RestApiTests extends BaseTestAPI {
 
     @Test
     @AllureId("11287")
-    @Description("Update Booking")
+    @Description("Update non-existent Booking")
     void updatedNonExistentBooking() {
         AuthPrecondition ids = new AuthPrecondition();
         BookingData body = new BookingData();
