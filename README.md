@@ -47,7 +47,7 @@ gradle clean test
 ```
 
 ## :bar_chart: Allure-отчет
-<img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-MobileUI/4/allure/">Allure report</a>
+<img src="images/logo/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/C01-elena_alexandrovna31-MobileUI/4/allure/">Allure report</a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/REST-API-Example-ED/7/allure/"><img src="images/screenshots/allure-main.png" alt="Allure"/></a>
 </p>
