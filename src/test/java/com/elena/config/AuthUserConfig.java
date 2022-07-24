@@ -2,7 +2,7 @@ package com.elena.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("classpath:auth-user.properties")
+@Config.Sources("classpath:data/auth-user.properties")
 
 public interface AuthUserConfig extends Config{
 // login credentials
