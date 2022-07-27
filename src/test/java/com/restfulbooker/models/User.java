@@ -1,4 +1,4 @@
-package com.elena.models;
+package com.restfulbooker.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

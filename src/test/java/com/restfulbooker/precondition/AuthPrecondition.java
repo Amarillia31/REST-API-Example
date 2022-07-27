@@ -1,21 +1,21 @@
-package com.elena.tests;
+package com.restfulbooker.precondition;
 
-import com.elena.config.AuthUserConfig;
-import com.elena.models.BookingData;
-import com.elena.models.BookingDates;
-import com.elena.models.User;
+import com.restfulbooker.config.AuthUserConfig;
+import com.restfulbooker.models.BookingData;
+import com.restfulbooker.models.BookingDates;
+import com.restfulbooker.models.User;
+import com.restfulbooker.tests.TestBase;
 import org.aeonbits.owner.ConfigFactory;
 
-import static com.elena.specs.Specs.request;
-import static com.elena.specs.Specs.responseSpec;
+import static com.restfulbooker.specs.Specs.request;
+import static com.restfulbooker.specs.Specs.responseSpec;
 import static io.restassured.RestAssured.given;
 
-public class AuthPrecondition extends BaseTestAPI{
+public class AuthPrecondition extends TestBase {
     AuthUserConfig config = ConfigFactory.create(AuthUserConfig.class);
 
     public String authToken() {
         User user = new User();
-
         user.setPassword(config.password());
         user.setUsername(config.username());
         return given()
@@ -31,18 +31,17 @@ public class AuthPrecondition extends BaseTestAPI{
     }
 
     public Integer getBookingId() {
-        BookingData body = new BookingData();
         BookingDates dates = new BookingDates();
+        dates.setCheckIn(config.checkIn());
+        dates.setCheckOut(config.checkOut());
 
-        dates.setCheckin(config.checkin());
-        dates.setCheckout(config.checkout());
-
-        body.setFirstname(config.firstname());
-        body.setLastname(config.lastname());
-        body.setTotalprice(config.totalprice());
-        body.setDepositpaid(config.depositpaid());
-        body.setBookingdates(dates);
-        body.setAdditionalneeds(config.additionalneeds());
+        BookingData body = new BookingData();
+        body.setFirstName(config.firstName());
+        body.setLastName(config.lastName());
+        body.setTotalPrice(config.totalPrice());
+        body.setDepositPaid(config.depositPaid());
+        body.setBookingDates(dates);
+        body.setAdditionalNeeds(config.additionalNeeds());
 
         return given()
                 .spec(request)

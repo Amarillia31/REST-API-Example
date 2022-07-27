@@ -1,11 +1,11 @@
-package com.elena.specs;
+package com.restfulbooker.specs;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-import static com.elena.helpers.CustomApiListener.withCustomTemplates;
+import static com.restfulbooker.helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 
 public class Specs {

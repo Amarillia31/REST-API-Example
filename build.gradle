@@ -51,8 +51,6 @@ dependencies {
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     )
-
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
 tasks.withType(JavaCompile) {
@@ -60,9 +58,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-
     systemProperty "chromeoptions.prefs", "intl.accept_languages=ru"
-
     useJUnitPlatform()
 
     testLogging {

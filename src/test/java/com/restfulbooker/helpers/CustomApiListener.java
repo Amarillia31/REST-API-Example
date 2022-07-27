@@ -1,4 +1,4 @@
-package com.elena.helpers;
+package com.restfulbooker.helpers;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 

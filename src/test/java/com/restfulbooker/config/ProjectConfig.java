@@ -1,4 +1,4 @@
-package com.elena.config;
+package com.restfulbooker.config;
 
 import org.aeonbits.owner.Config;
 
@@ -7,7 +7,7 @@ import org.aeonbits.owner.Config;
         "system:properties",
         "classpath:config/api.properties"
 })
-public interface ProjectConfig extends Config{
+public interface ProjectConfig extends Config {
     @Key("baseURI")
     @DefaultValue("https://restful-booker.herokuapp.com/")
     String getBaseUri();
