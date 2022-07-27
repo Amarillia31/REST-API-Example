@@ -1,10 +1,9 @@
 package com.restfulbooker.tests;
 
 import com.restfulbooker.config.UserConfig;
-import com.restfulbooker.models.BookingData;
 import com.restfulbooker.models.Booking;
+import com.restfulbooker.models.BookingData;
 import com.restfulbooker.models.BookingDates;
-import com.restfulbooker.models.User;
 import com.restfulbooker.precondition.AuthPrecondition;
 import io.qameta.allure.AllureId;
 import jdk.jfr.Description;
