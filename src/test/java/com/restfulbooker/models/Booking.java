@@ -9,5 +9,6 @@ import lombok.Data;
 public class Booking {
     @JsonProperty("bookingid")
     private Integer bookingId;
+
     private BookingData booking;
 }

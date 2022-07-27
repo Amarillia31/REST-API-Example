@@ -9,6 +9,7 @@ import lombok.Data;
 public class BookingDates {
     @JsonProperty("checkin")
     private String checkIn;
+
     @JsonProperty("checkout")
     private String checkOut;
 }
